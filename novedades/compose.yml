@@ -1,0 +1,8 @@
+# compose.yml propio del microservicio NOVEDADES.
+# Sirve para levantarlo de forma aislada, sin tocar el compose.yml de la raíz:
+#   docker compose -f novedades/compose.yml up --build
+services:
+  novedades:
+    build: .
+    ports:
+      - "4003:4003"
